@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    overflow: hidden;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff2e63;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff2e63;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    margin-top: 15px;
+    color: #ff2e63;
+    font-weight: bold;
+}
+
+/* Bears */
+.bear {
+    position: absolute;
+    font-size: 120px;
+    animation: bounce 2s infinite;
+}
+
+.left-bear { left: 20px; bottom: 30px; }
+.right-bear { right: 20px; bottom: 30px; }
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Flowers */
+.flower {
+    position: absolute;
+    font-size: 28px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
